@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-USER_ID = "demo-user-001"
-INTERACTION_ID = "demo-interaction-001"
+USER_ID = "demo-user-openai-agents-sdk"
+INTERACTION_ID = "demo-interaction-openai-agents-sdk"
 USER_MESSAGE = "I tried inviting my teammate but could not find the button anywhere."
 
 

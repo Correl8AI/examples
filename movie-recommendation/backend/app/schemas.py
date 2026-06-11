@@ -11,7 +11,7 @@ class ChatMessage(BaseModel):
 class ChatRequest(BaseModel):
     messages: list[ChatMessage]
     interaction_id: str
-    user_id: str = "demo-user"
+    user_id: str = "demo-user-movie-recommendation"
 
 
 class ChatResponse(BaseModel):

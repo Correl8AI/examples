@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-USER_ID = "demo-user-001"
-INTERACTION_ID = "demo-interaction-001"
+USER_ID = "demo-user-pydantic-ai"
+INTERACTION_ID = "demo-interaction-pydantic-ai"
 USER_MESSAGE = "I tried inviting my teammate but could not find the button anywhere."
 
 

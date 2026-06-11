@@ -12,8 +12,8 @@ from openai import OpenAI
 
 load_dotenv()
 
-USER_ID = "demo-user-001"
-INTERACTION_ID = "demo-interaction-001"
+USER_ID = "demo-user-basic-agent"
+INTERACTION_ID = "demo-interaction-basic-agent"
 USER_MESSAGE = "I tried inviting my teammate but could not find the button anywhere."
 
 POST_OBSERVATION_TOOL = {
