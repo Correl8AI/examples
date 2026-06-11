@@ -22,6 +22,10 @@ def correl8_api_key() -> str:
     return require_env("CORREL8_API_KEY").removeprefix("ApiKey ").strip()
 
 
+def openai_api_key() -> str:
+    return require_env("OPENAI_API_KEY")
+
+
 def mcp_url() -> str:
     url = require_env("CORREL8_MCP_URL").rstrip("/")
     return f"{url}/"

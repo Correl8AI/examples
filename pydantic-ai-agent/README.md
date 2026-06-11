@@ -1,11 +1,11 @@
-# openai-agents-sdk
+# pydantic-ai-agent
 
-OpenAI Agents SDK agent with Correl8 MCP `post_observation`.
+Pydantic AI agent with Correl8 MCP `post_observation`.
 
 ## Run
 
 ```bash
-cd openai-agents-sdk
+cd pydantic-ai-agent
 uv sync
 cp .env.example .env
 # set CORREL8_MCP_URL, CORREL8_API_KEY, OPENAI_API_KEY
@@ -22,9 +22,9 @@ The agent should call `post_observation` with negative sentiment about the missi
 
 ## What it does
 
-1. Connects to Correl8 MCP with the OpenAI Agents SDK
+1. Connects to Correl8 MCP with Pydantic AI
 2. Runs one scripted turn
-3. Prints the agent reply
+3. Prints any `post_observation` tool call and the agent reply
 
 ## Verify
 

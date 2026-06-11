@@ -8,7 +8,7 @@ LangChain agent that calls Correl8 MCP `post_observation` during a scripted conv
 cd langchain-agent-observations
 uv sync
 cp .env.example .env
-# set CORREL8_PROJECT_ID, CORREL8_API_KEY, OPENAI_API_KEY
+# set CORREL8_MCP_URL, CORREL8_API_KEY, OPENAI_API_KEY
 uv run python -m app.demo
 ```
 
@@ -29,7 +29,7 @@ The agent should call `post_observation` with negative sentiment about the missi
 ## Verify
 
 ```text
-https://app.correl8.ai/project/{CORREL8_PROJECT_ID}/observations
+https://app.correl8.ai/project/{project_id}/observations
 ```
 
 Look for an observation about the teammate invite flow.

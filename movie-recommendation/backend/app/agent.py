@@ -78,9 +78,8 @@ def _correl8_api_key() -> str:
 
 
 def _mcp_url() -> str:
-    base_url = os.environ.get("CORREL8_BASE_URL", "https://app.correl8.ai").rstrip("/")
-    project_id = _require_env("CORREL8_PROJECT_ID")
-    return f"{base_url}/mcp/v1/project/{project_id}/"
+    url = _require_env("CORREL8_MCP_URL").rstrip("/")
+    return f"{url}/"
 
 
 def build_agent() -> Agent[ChatDeps, str]:

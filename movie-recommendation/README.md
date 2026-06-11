@@ -5,8 +5,8 @@ Minimal chat app (React + FastAPI + Pydantic AI) that recommends movies and conn
 ## Prerequisites
 
 1. A [Correl8](https://app.correl8.ai) project
-2. Project API key — **Settings** → create/copy key → `CORREL8_API_KEY`
-3. `CORREL8_PROJECT_ID` from your project URL
+2. MCP URL — **Settings → Details** → paste into `CORREL8_MCP_URL`
+3. Project API key — **Settings** → create/copy key → `CORREL8_API_KEY`
 4. `OPENAI_API_KEY`
 
 Copy `local/.env.example` → `local/.env` and fill in the values above.
@@ -54,9 +54,9 @@ To test product feedback directly, try: *"The send button didn't work when I pre
 ## Verify
 
 ```text
-https://app.correl8.ai/project/{CORREL8_PROJECT_ID}/observations
+https://app.correl8.ai/project/{project_id}/observations
 ```
 
 ## Self-hosted Correl8
 
-Set `CORREL8_BASE_URL=http://localhost:8000` in `local/.env` (native) or `http://host.docker.internal:8000` (Docker).
+Set `CORREL8_MCP_URL=http://localhost:8000/mcp/v1/project/<project-id>/` in `local/.env` (native) or `http://host.docker.internal:8000/mcp/v1/project/<project-id>/` (Docker).

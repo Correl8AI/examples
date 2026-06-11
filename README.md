@@ -32,6 +32,7 @@ https://app.correl8.ai/project/{CORREL8_PROJECT_ID}/observations
 | [basic-agent](./basic-agent/) | REST custom tool | **Yes** |
 | [langchain-agent-observations](./langchain-agent-observations/) | LangChain + MCP | |
 | [openai-agents-sdk](./openai-agents-sdk/) | OpenAI Agents SDK + MCP | |
+| [pydantic-ai-agent](./pydantic-ai-agent/) | Pydantic AI + MCP | |
 
 ## Full demo app
 
