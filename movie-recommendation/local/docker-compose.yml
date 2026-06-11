@@ -1,0 +1,37 @@
+services:
+  backend:
+    build: ../backend
+    ports:
+      - "8001:8001"
+    env_file:
+      - .env
+    volumes:
+      - ../backend/app:/app/app
+    command:
+      [
+        "uvicorn",
+        "app.main:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8001",
+        "--reload",
+        "--reload-dir",
+        "/app/app",
+      ]
+
+  frontend:
+    build: ../frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8001
+    volumes:
+      - ../frontend:/app
+      - frontend_node_modules:/app/node_modules
+    command: sh -c "npm install && npm run dev -- --host 0.0.0.0 --port 5173"
+    depends_on:
+      - backend
+
+volumes:
+  frontend_node_modules:

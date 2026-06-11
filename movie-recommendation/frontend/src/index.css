@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #2c2924;
+  --color-foreground: #f5f0e8;
+  --color-cream: #f5f0e8;
+  --color-beige: #ebe4d8;
+  --color-gold: #d4b483;
+  --color-gold-muted: #b8aea0;
+  --color-emerald: #7db896;
+  --color-emerald-light: #9fd4b0;
+  --color-burgundy: #d4a0a8;
+  --color-burgundy-light: #e8bcc2;
+  --color-surface: rgb(245 240 232 / 0.12);
+  --color-surface-raised: rgb(245 240 232 / 0.18);
+  --color-card: rgb(245 240 232 / 0.1);
+  --color-card-foreground: #f5f0e8;
+  --color-primary: #7db896;
+  --color-primary-foreground: #2a2824;
+  --color-secondary: rgb(212 160 168 / 0.22);
+  --color-secondary-foreground: #f5f0e8;
+  --color-muted: rgb(245 240 232 / 0.12);
+  --color-muted-foreground: #b8aea0;
+  --color-border: rgb(245 240 232 / 0.2);
+  --color-input: rgb(245 240 232 / 0.16);
+  --color-ring: rgb(212 180 131 / 0.55);
+  --radius-sm: 0.625rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.125rem;
+  --font-serif: "Playfair Display", "Georgia", serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-background);
+  background-image:
+    radial-gradient(ellipse 90% 70% at 50% -10%, rgb(180 150 110 / 0.22), transparent 55%),
+    radial-gradient(ellipse 60% 50% at 100% 50%, rgb(212 180 131 / 0.16), transparent 50%),
+    radial-gradient(ellipse 50% 45% at 0% 100%, rgb(125 184 150 / 0.12), transparent 45%),
+    linear-gradient(180deg, #343028 0%, #2a2722 100%);
+  color: var(--color-cream);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.glass {
+  background: rgb(245 240 232 / 0.14);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgb(245 240 232 / 0.2);
+}
+
+.glass-raised {
+  background: rgb(245 240 232 / 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgb(245 240 232 / 0.26);
+}
+
+.cinema-transition {
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes cinema-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cinema-fade-in {
+  animation: cinema-fade-in 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,14 @@
+[project]
+name = "basic-agent"
+version = "0.1.0"
+description = "Minimal Correl8 integration via REST custom tool"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28.1",
+    "openai>=1.68.0",
+    "python-dotenv>=1.0.1",
+]
+
+[tool.uv]
+package = false
