@@ -66,7 +66,7 @@ def _require_env(name: str) -> str:
 
 
 def _settings() -> tuple[str, str, str, str]:
-    base_url = os.environ.get("CORREL8_BASE_URL", "https://app.correl8.ai").rstrip("/")
+    base_url = os.environ.get("CORREL8_BASE_URL", "https://api.correl8.ai").rstrip("/")
     project_id = _require_env("CORREL8_PROJECT_ID")
     api_key = _require_env("CORREL8_API_KEY").removeprefix("ApiKey ").strip()
     openai_key = _require_env("OPENAI_API_KEY")
